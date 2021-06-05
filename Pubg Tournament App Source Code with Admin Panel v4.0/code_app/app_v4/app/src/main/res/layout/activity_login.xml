@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimaryDark"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:textSize="25.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@+id/signintext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:text="@string/sign_in" android:layout_centerHorizontal="true" android:textAllCaps="true" android:fontFamily="@font/lato_black" tools:context=".pubg.activity.LoginActivity" />
+    <RelativeLayout android:id="@+id/card_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="24.0dip" android:layout_below="@+id/signintext" android:layout_centerInParent="true">
+        <androidx.cardview.widget.CardView android:id="@+id/card_login" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:foreground="?android:selectableItemBackground" card_view:cardBackgroundColor="#ffffffff" card_view:cardCornerRadius="4.0dip" card_view:cardElevation="0.0dip" card_view:cardUseCompatPadding="false">
+            <LinearLayout android:orientation="vertical" android:padding="24.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="50.0dip">
+                <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="#ff3796bc" android:id="@+id/regSuccessMessage" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/login_successfully" android:fontFamily="@font/lato" />
+                <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/username" android:paddingLeft="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Username" android:inputType="textPersonName" android:fontFamily="@font/lato" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/etPasswordLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" app:passwordToggleEnabled="true" xmlns:app="http://schemas.android.com/apk/res-auto">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/password" android:paddingLeft="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/password" android:inputType="textPassword" android:imeOptions="actionDone" android:fontFamily="@font/lato" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <RelativeLayout android:id="@+id/cardRL" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <androidx.cardview.widget.CardView android:layout_gravity="center_horizontal" android:id="@+id/signinbtncard" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:elevation="2.0dip" card_view:cardCornerRadius="2.0dip" card_view:cardPreventCornerOverlap="true">
+                        <Button android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="#ff23283a" android:id="@+id/signinbtn" android:background="#fffdc210" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sign_in" android:textAllCaps="true" android:fontFamily="@font/lato_black" />
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/cardRL">
+                    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_alignParentEnd="true">
+                        <TextView android:id="@+id/forgotpass" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/forgot_password" android:fontFamily="@font/lato" />
+                        <TextView android:textStyle="bold" android:id="@+id/resetnow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/reset_now" android:layout_toRightOf="@+id/forgotpass" android:fontFamily="@font/lato" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/profile" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/profile" android:layout_centerHorizontal="true" app:civ_border_color="#ff23283a" app:civ_border_width="5.0dip" xmlns:app="http://schemas.android.com/apk/res-auto" />
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_above="@id/signupcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/spacing_large"
+        android:visibility="gone"/>
+
+    <androidx.cardview.widget.CardView android:id="@+id/signupcard" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:elevation="5.0dip" card_view:cardPreventCornerOverlap="true">
+        <Button android:textSize="15.0sp" android:textColor="#ffffffff" android:id="@+id/registerFromLogin" android:background="#ff3796bc" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/create_new_account" android:fontFamily="@font/lato_black" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

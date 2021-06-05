@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10.0dip"
+    android:layout_marginRight="10.0dip"
+    android:layout_marginTop="5.0dip"
+    android:layout_marginBottom="5.0dip"
+    app:cardCornerRadius="5dp"
+    app:cardPreventCornerOverlap="true">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:padding="5.0dip" android:background="#cac8c8" android:layout_weight="0.43">
+            <ImageView android:id="@+id/srNo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/announce" android:fontFamily="@font/lato" />
+        </LinearLayout>
+        <LinearLayout android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip" android:layout_weight="0.1">
+            <TextView android:textSize="13.0sp" android:textStyle="bold" android:layout_gravity="start" android:id="@+id/titleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PUBG Mobile Match #35" android:singleLine="true" android:fontFamily="@font/lato" />
+            <TextView android:textSize="10.0sp" android:layout_gravity="start" android:id="@+id/dateTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="Played On: 10/10/2018 at 7 PM" android:singleLine="true" android:fontFamily="@font/lato" />
+        </LinearLayout>
+        <LinearLayout android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip" android:layout_weight="0.45">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_navigate" android:layout_alignParentEnd="true" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

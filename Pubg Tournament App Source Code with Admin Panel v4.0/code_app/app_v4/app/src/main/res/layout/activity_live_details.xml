@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.LiveDetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/darkBlue"
+            app:expandedTitleTextAppearance="@style/personal_expanded_title"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/matchImage"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:src="@drawable/pubg_banner"
+                android:scaleType="fitXY" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="My Wallet"
+                app:titleTextColor="@color/white"
+                app:layout_collapseMode="pin"
+                app:contentInsetEnd="0.0dip"
+                app:contentInsetLeft="0.0dip"
+                app:contentInsetRight="0.0dip"
+                app:contentInsetStart="0.0dip"
+                app:elevation="0.0dip"
+                app:theme="@style/MyToolbarTheme" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView app:layout_behavior="@string/appbar_scrolling_view_behavior" android:id="@+id/nestedScroll" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/actionBarSize">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" >
+            <RelativeLayout android:orientation="vertical" android:id="@+id/matchIDPassLL" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" >
+                <TextView android:textSize="17.0sp" android:textColor="@color/blueRandom" android:id="@+id/titleMatchIDPass" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="5.0dip" android:text="Match Room Details" android:fontFamily="@font/lato_black" />
+                <TextView android:textSize="17.0sp" android:id="@+id/roomIDPassUpcoming" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="5.0dip" android:text="Upcoming Username and Password" android:layout_below="@+id/titleMatchIDPass" android:fontFamily="@font/lato" />
+                <RelativeLayout android:id="@+id/roomIDPassRL" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@+id/titleMatchIDPass">
+                    <TextView android:textSize="17.0sp" android:id="@+id/roomIDText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginBottom="5.0dip" android:text="Room ID: " android:fontFamily="@font/lato" />
+                    <TextView android:textSize="17.0sp" android:id="@+id/roomIDValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="15.0dip" android:layout_marginBottom="5.0dip" android:text="15263" android:layout_toRightOf="@+id/roomIDText" android:fontFamily="@font/lato_black" />
+                    <TextView android:textSize="17.0sp" android:id="@+id/roomPassText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="5.0dip" android:text="Room Password: " android:layout_below="@+id/roomIDText" android:fontFamily="@font/lato" />
+                    <TextView android:textSize="17.0sp" android:id="@+id/roomPassValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="5.0dip" android:text="PLZ123" android:layout_toRightOf="@+id/roomPassText" android:layout_below="@+id/roomIDText" android:fontFamily="@font/lato_black" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <TextView android:textSize="17.0sp" android:textColor="@color/blueRandom" android:id="@+id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="5.0dip" android:text="PUBG Mobile Match #35" android:layout_below="@+id/matchIDPassLL" android:fontFamily="@font/lato_black" />
+            <RelativeLayout android:id="@+id/RLTVM" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="5.0dip" android:layout_below="@+id/title">
+                <androidx.cardview.widget.CardView android:id="@+id/typeCard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" app:cardPreventCornerOverlap="true" app:contentPadding="10.0dip">
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:text="@string/type_" android:fontFamily="@font/lato" />
+                        <TextView android:textSize="15.0dip" android:textStyle="bold" android:id="@+id/type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Squad" android:fontFamily="@font/lato" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/versionCard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_toRightOf="@+id/typeCard" app:cardPreventCornerOverlap="true" app:contentPadding="10.0dip">
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:text="@string/version_" android:fontFamily="@font/lato" />
+                        <TextView android:textSize="15.0dip" android:textStyle="bold" android:id="@+id/version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FPP" android:fontFamily="@font/lato" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/mapCard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_toRightOf="@+id/versionCard" app:cardPreventCornerOverlap="true" app:contentPadding="10.0dip">
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:text="@string/map_" android:fontFamily="@font/lato" />
+                        <TextView android:textSize="15.0dip" android:textStyle="bold" android:id="@+id/map" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Erangel" android:fontFamily="@font/lato" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/RLMTEF" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="5.0dip" android:layout_below="@+id/RLTVM">
+                <androidx.cardview.widget.CardView android:id="@+id/matchTypeCard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="3.0dip" android:layout_marginBottom="10.0dip" app:cardPreventCornerOverlap="true" app:contentPadding="10.0dip">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="15.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:text="@string/match_type_" android:fontFamily="@font/lato" />
+                        <TextView android:textSize="15.0sp" android:textStyle="bold" android:id="@+id/matchType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Free" android:fontFamily="@font/lato" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="3.0dip" android:layout_marginBottom="10.0dip" android:layout_toRightOf="@+id/matchTypeCard" app:cardPreventCornerOverlap="true" app:contentPadding="10.0dip">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="15.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:text="@string/entry_fee_" android:fontFamily="@font/lato" />
+                        <TextView android:textSize="15.0sp" android:textStyle="bold" android:id="@+id/fee" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="50" android:fontFamily="@font/lato" android:drawableLeft="@drawable/coin_icon_16x16" android:drawablePadding="5dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/RLtimedate" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dip" android:layout_marginRight="5.0dip" android:layout_below="@+id/RLMTEF">
+                <androidx.cardview.widget.CardView android:id="@+id/timeCard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="3.0dip" android:layout_marginBottom="10.0dip" app:cardPreventCornerOverlap="true" app:contentPadding="10.0dip">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="15.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:text="@string/match_schedule_" android:fontFamily="@font/lato" />
+                        <TextView android:textSize="15.0sp" android:textStyle="bold" android:id="@+id/startdate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10/12/2018 at 10:00 AM" android:fontFamily="@font/lato" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+            <TextView android:textSize="17.0sp" android:textColor="@color/blueRandom" android:id="@+id/prizeDetails" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:text="@string/prize_details" android:layout_below="@+id/RLtimedate" android:fontFamily="@font/lato_black" />
+            <RelativeLayout android:id="@+id/RLPD" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="3.0dip" android:layout_below="@+id/prizeDetails">
+                <androidx.cardview.widget.CardView android:id="@+id/winnerPrizeCard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" app:cardPreventCornerOverlap="true" app:contentPadding="10.0dip">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="15.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:text="@string/winning_prize_" android:fontFamily="@font/lato" />
+                        <TextView android:textSize="15.0sp" android:textStyle="bold" android:id="@+id/winnerPrize" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="50" android:fontFamily="@font/lato" android:drawableLeft="@drawable/coin_icon_16x16" android:drawablePadding="5dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_toRightOf="@+id/winnerPrizeCard" app:cardPreventCornerOverlap="true" app:contentPadding="10.0dip">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="15.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:text="@string/per_kill_" android:fontFamily="@font/lato" />
+                        <TextView android:textSize="15.0sp" android:textStyle="bold" android:id="@+id/perKillPrize" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10" android:fontFamily="@font/lato" android:drawableLeft="@drawable/coin_icon_16x16" android:drawablePadding="5dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+            <TextView android:textSize="17.0sp" android:textColor="@color/blueRandom" android:id="@+id/aboutMatch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:text="@string/about_this_match" android:layout_below="@+id/RLPD" android:fontFamily="@font/lato_black" />
+            <LinearLayout android:orientation="vertical" android:id="@+id/aboutMatchListLL" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@+id/aboutMatch">
+                <WebView android:id="@+id/listRules" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="8.0dip"
+                    tools:ignore="WebViewLayout" />
+            </LinearLayout>
+            <RelativeLayout android:id="@+id/rLParticipants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_below="@+id/aboutMatchListLL">
+                <TextView android:textSize="17.0sp" android:textColor="@color/blueRandom" android:id="@+id/participants" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/participants" android:fontFamily="@font/lato_black" />
+                <TextView android:textSize="15.0sp" android:gravity="center" android:id="@+id/refreshLVBtn" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:foreground="?android:selectableItemBackground" android:text="@string/refresh" android:drawableLeft="@drawable/ic_refresh" android:fontFamily="@font/lato_black" android:layout_alignParentEnd="true" android:drawableTint="#ff000000" />
+            </RelativeLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/loadBtnLL" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="17.0dip" android:layout_marginBottom="15.0dip" android:layout_below="@+id/rLParticipants">
+                <Button android:textColor="@color/blueRandom" android:gravity="center" android:id="@+id/loadBtn" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/load_participants" android:drawableLeft="@drawable/ic_refresh" />
+            </LinearLayout>
+            <TextView android:textSize="15.0sp" android:textStyle="bold" android:gravity="center" android:id="@+id/noParticipantsText" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="17.0dip" android:layout_marginBottom="15.0dip" android:text="@string/no_participants_yet" android:layout_below="@+id/loadBtnLL" android:fontFamily="@font/lato" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/listParticipants" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="17.0dip" android:layout_marginBottom="15.0dip" android:layout_below="@+id/rLParticipants" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout android:orientation="horizontal" android:id="@+id/bottomButtonsLL" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_gravity="bottom">
+        <Button android:textSize="15.0sp" android:textColor="#ffffffff" android:id="@+id/spectateButton" android:background="#ff23d54a" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:clickable="true" android:layout_width="0.0dip" android:layout_height="?actionBarSize" android:foreground="?android:selectableItemBackground" android:text="@string/spectate" android:drawablePadding="10.0dip" android:layout_weight="1.0" android:textAllCaps="true" android:fontFamily="@font/lato_black" />
+        <Button android:textSize="15.0sp" android:textColor="#ffffffff" android:id="@+id/playButton" android:background="@color/colorAccent" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="visible" android:clickable="true" android:layout_width="0.0dip" android:layout_height="?actionBarSize" android:foreground="?android:selectableItemBackground" android:text="@string/play_now" android:layout_weight="1.0" android:textAllCaps="true" android:fontFamily="@font/lato_black" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

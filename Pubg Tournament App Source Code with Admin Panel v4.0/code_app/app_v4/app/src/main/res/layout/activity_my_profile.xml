@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="#fffafafa"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.MyProfileActivity"
+    xmlns:tools="http://schemas.android.com/tools">
+    <include layout="@layout/appbar" />
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:padding="17.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <TextView android:textSize="17.0sp" android:textColor="@color/blueRandom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/edit_profile" android:fontFamily="@font/lato_black" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                    <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.google.android.material.textfield.TextInputEditText android:textSize="17.0sp" android:id="@+id/firstname" android:paddingLeft="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Hello" android:hint="@string/first_name" android:maxLength="20" android:inputType="textCapWords" android:imeOptions="actionNext" android:fontFamily="@font/lato" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.google.android.material.textfield.TextInputEditText android:textSize="17.0sp" android:id="@+id/lastname" android:paddingLeft="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Abc" android:hint="@string/last_name" android:maxLength="20" android:layout_weight="1.0" android:inputType="textCapWords" android:fontFamily="@font/lato" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                    <com.google.android.material.textfield.TextInputEditText android:enabled="false" android:textSize="17.0sp" android:id="@+id/username" android:paddingLeft="7.0dip" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="helloabc" android:hint="@string/username" android:maxLength="20" android:inputType="textPersonName" android:fontFamily="@font/lato" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                    <com.google.android.material.textfield.TextInputEditText android:enabled="true" android:textSize="17.0sp" android:id="@+id/email" android:paddingLeft="7.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="hello@abc.xyz" android:hint="@string/email_address" android:maxLength="30" android:inputType="textEmailAddress" android:fontFamily="@font/lato" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout android:id="@+id/countryCodeInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginTop="5.0dip">
+                        <com.google.android.material.textfield.TextInputEditText android:enabled="false" android:textSize="17.0sp" android:id="@+id/countryCode" android:paddingLeft="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/code" android:maxLength="5" android:inputType="phone" android:text="+91" android:fontFamily="@font/lato" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout android:id="@+id/mNoTIL" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.3" android:layout_marginTop="5.0dip">
+                        <com.google.android.material.textfield.TextInputEditText android:enabled="false" android:textSize="17.0sp" android:id="@+id/mobileNumber" android:paddingLeft="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="\ 9192939495" android:hint="@string/mobile_number" android:maxLength="15" android:inputType="number" android:fontFamily="@font/lato" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <TextView android:visibility="gone" android:textColor="@color/errorRed" android:id="@+id/verifyNo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="VERIFY" android:layout_centerInParent="true" android:fontFamily="@font/lato_black" android:layout_alignParentEnd="true" />
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" >
+                    <com.google.android.material.textfield.TextInputEditText android:textSize="17.0sp" android:id="@+id/dob" android:paddingLeft="7.0dip" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/date_of_birth" android:inputType="number" android:fontFamily="@font/lato" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <LinearLayout android:visibility="gone" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                    <TextView android:textSize="17.0sp" android:layout_gravity="center" android:paddingLeft="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gender: " />
+                    <RadioGroup android:orientation="horizontal" android:id="@+id/gender" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <RadioButton android:id="@+id/male" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Male" android:fontFamily="@font/lato" />
+                        <RadioButton android:id="@+id/female" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Female" android:fontFamily="@font/lato" />
+                    </RadioGroup>
+                </LinearLayout>
+                <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/blueRandom" android:id="@+id/messageView" android:paddingLeft="7.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="8.0dip" android:text="@string/successfully_updated" android:fontFamily="@font/lato" />
+                <Button android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="#ff23283a" android:id="@+id/saveBtn" android:background="#fffdc210" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/save" android:textAllCaps="true" android:fontFamily="@font/lato_black" />
+                <TextView android:textSize="17.0sp" android:textColor="@color/blueRandom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/reset_password" android:fontFamily="@font/lato_black" />
+                <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" app:passwordToggleEnabled="true">
+                    <com.google.android.material.textfield.TextInputEditText android:textSize="17.0sp" android:id="@+id/oldpass" android:paddingLeft="7.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/old_password" android:inputType="textPassword" android:fontFamily="@font/lato" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" app:passwordToggleEnabled="true">
+                    <com.google.android.material.textfield.TextInputEditText android:textSize="17.0sp" android:id="@+id/newpass" android:paddingLeft="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/new_password" android:inputType="textPassword" android:fontFamily="@font/lato" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" app:passwordToggleEnabled="true" >
+                    <com.google.android.material.textfield.TextInputEditText android:textSize="17.0sp" android:id="@+id/retypeNewPass" android:paddingLeft="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/retype_new_password" android:inputType="textPassword" android:fontFamily="@font/lato" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/blueRandom" android:id="@+id/passwordMessageView" android:paddingLeft="7.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="8.0dip" android:text="@string/successfully_updated" android:fontFamily="@font/lato" />
+                <Button android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="#ff23283a" android:id="@+id/changePassBtn" android:background="#fffdc210" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="5.0dip" android:text="@string/reset" android:textAllCaps="true" android:fontFamily="@font/lato_black" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

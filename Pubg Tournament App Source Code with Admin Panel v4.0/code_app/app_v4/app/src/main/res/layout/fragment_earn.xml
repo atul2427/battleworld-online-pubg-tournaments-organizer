@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+
+        <LinearLayout android:id="@+id/referandearncard" android:background="@drawable/grad1" android:layout_width="match_parent" android:layout_height="200dp" android:layout_margin="10dp">
+            <LinearLayout android:layout_gravity="center" android:background="?attr/selectableItemBackground" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="4">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="2">
+                    <ImageView android:layout_width="200dp" android:layout_height="140dp" android:layout_margin="10dp" android:src="@drawable/inviteandearn"/>
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="2">
+                    <TextView android:textSize="23dp" android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Refer and Earn" android:fontFamily="@font/lato_black"/>
+                    <TextView android:textSize="14dp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Invite your friends to the app and Earn Huge!" android:fontFamily="@font/lato_black"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/watchandearncard" android:background="@drawable/grad2" android:layout_width="match_parent" android:layout_height="200dp" android:layout_marginStart="10dp" android:layout_marginEnd="10dp" android:layout_marginBottom="10dp">
+            <LinearLayout android:layout_gravity="center" android:background="?attr/selectableItemBackground" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="4">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="2">
+                    <ImageView android:layout_width="200dp" android:layout_height="140dp" android:layout_margin="10dp" android:src="@drawable/watchandearn"/>
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="2">
+                    <TextView android:textSize="23dp" android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Watch and Earn" android:fontFamily="@font/lato_black"/>
+                    <TextView android:textSize="14dp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Watch reward video daily and Earn Huge!" android:fontFamily="@font/lato_black"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/playandearncard" android:background="@drawable/grad3" android:layout_width="match_parent" android:layout_height="200dp" android:layout_marginStart="10dp" android:layout_marginEnd="10dp" android:layout_marginBottom="10dp">
+            <LinearLayout android:layout_gravity="center" android:background="?attr/selectableItemBackground" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="4">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="2">
+                    <ImageView android:layout_width="200dp" android:layout_height="140dp" android:layout_margin="10dp" android:src="@drawable/playandearn"/>
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="2">
+                    <TextView android:textSize="23dp" android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Play and Earn" android:fontFamily="@font/lato_black"/>
+                    <TextView android:textSize="14dp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Play pubg tournament daily and Earn Huge!" android:fontFamily="@font/lato_black"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
